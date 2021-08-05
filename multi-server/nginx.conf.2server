@@ -10,7 +10,7 @@ http {
         location / {
                 default_type text/html;
                 content_by_lua_block {
-                    ngx.say("<p>hello, cj1</p>")
+                    ngx.say("<html><body><ul><li><a href="/public">Public endpoint</a></li><li><a href="/private">Private endpoint</a></li></ul></body></html>")
                 }
             }
         location /public {
@@ -64,7 +64,7 @@ http {
         location / {
                 default_type text/html;
                 content_by_lua_block {
-                    ngx.say("<p>hello, cj2</p>")
+                    ngx.say("<html><body><ul><li><a href="/public">Public endpoint</a></li><li><a href="/private">Private endpoint</a></li></ul></body></html>")
                 }
             }
 
